@@ -197,7 +197,6 @@
 </head>
 <body>
 
-  <!-- Logo Klinik -->
   <img src="logo.png" alt="Logo Klinik Sehat" class="logo" />
 
   <header id="header">
@@ -213,18 +212,15 @@
     <span class="logout-icon" onclick="logout()">Logout</span>
   </header>
 
-  <!-- Hero dengan animasi ketik -->
   <div class="hero">
     <h1 id="hero-title"></h1>
     <p id="hero-desc"></p>
   </div>
 
-  <!-- Section Layanan -->
   <div class="section-bg">
     <div class="content">
       <h2>Layanan Kami</h2>
       <div class="cards">
-        <!-- Card Layanan -->
         <a href="spesialisbidan.html" class="card-link">
           <div class="card">
             <img src="spsbidan.jpg" alt="Spesialis Bidan" />
@@ -283,7 +279,6 @@
         </a>
       </div>
 
-      <!-- Tombol Pendaftaran -->
       <div>
         <a href="pasien.html" class="btn-daftar">Isi Formulir Pendaftaran Pasien</a>
       </div>
@@ -298,11 +293,10 @@
   <script>
     function logout() {
       if (confirm('Apakah Anda yakin ingin logout?')) {
-        window.location.href = 'login.html';
+        window.location.href = 'index.html'; // ← huruf L besar sesuai file
       }
     }
 
-    // Background header slideshow
     const header = document.getElementById('header');
     const images = ['1.jpg', 'dua.jpg', 'tiga.webp'];
     let bgIndex = 0;
@@ -314,7 +308,6 @@
 
     setInterval(changeHeaderBackground, 4000);
 
-    // Hero text typewriter effect
     const titles = [
       "Selamat Datang di Layanan Klinik",
       "Klinik Kesehatan Terbaik Keluarga Anda",
