@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pendaftaran Pasien</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('dua.jpg'); /* Ganti dengan background Anda */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #333;
+    }
+
+    header {
+      background-color: rgba(0, 121, 107, 0.9);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 30px;
+    }
+
+    .logo {
+      height: 50px;
+      border-radius: 50%;
+      border: 2px solid white;
+    }
+
+    header h1 {
+      flex-grow: 1;
+      text-align: center;
+      font-size: 26px;
+      margin: 0;
+    }
+
+    .btn-beranda {
+      background-color: #ffffff;
+      color: #00796b;
+      padding: 10px 20px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      transition: background-color 0.3s;
+    }
+
+    .btn-beranda:hover {
+      background-color: #c8e6c9;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      text-align: center;
+      color: #00796b;
+      margin-bottom: 30px;
+    }
+
+    form label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+
+    form textarea {
+      resize: vertical;
+    }
+
+    form button {
+      margin-top: 25px;
+      background-color: #00796b;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    form button:hover {
+      background-color: #004d40;
+    }
+
+    footer {
+      background-color: rgba(0, 121, 107, 0.9);
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      header h1 {
+        font-size: 22px;
+      }
+
+      .btn-beranda {
+        font-size: 12px;
+        padding: 8px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="logo.png" alt="Logo Klinik" class="logo" />
+  <h1>Pendaftaran Pasien</h1>
+  <a href="Halaman.html" class="btn-beranda">Beranda</a>
+</header>
+
+<div class="container">
+  <h2>Formulir Pendaftaran Pasien</h2>
+  <form action="#" method="post">
+    <label for="nama">Nama Lengkap:</label>
+    <input type="text" id="nama" name="nama" required />
+
+    <label for="gender">Jenis Kelamin:</label>
+    <select id="gender" name="gender" required>
+      <option value="">-- Pilih --</option>
+      <option value="Pria">Pria</option>
+      <option value="Wanita">Wanita</option>
+    </select>
+
+    <label for="tgl_lahir">Tanggal Lahir:</label>
+    <input type="date" id="tgl_lahir" name="tgl_lahir" required />
+
+    <label for="umur">Umur:</label>
+    <input type="number" id="umur" name="umur" min="0" required />
+
+    <label for="nohp">Nomor HP:</label>
+    <input type="tel" id="nohp" name="nohp" pattern="[0-9]{10,15}" required placeholder="08xxxxxxxxxx" />
+
+    <label for="alamat">Alamat:</label>
+    <textarea id="alamat" name="alamat" rows="3" required></textarea>
+
+    <label for="layanan">Layanan yang Dipilih:</label>
+    <select id="layanan" name="layanan" required>
+      <option value="">-- Pilih Layanan --</option>
+      <option value="Dokter Umum">Dokter Umum</option>
+      <option value="Spesialis Kandungan">Spesialis Kandungan</option>
+      <option value="Fisioterapis">Fisioterapis</option>
+      <option value="Aesthetic & Anti-Aging">Aesthetic & Anti-Aging</option>
+      <option value="Senam Hamil">Senam Hamil</option>
+      <option value="Pijat Bayi">Pijat Bayi</option>
+      <option value="Apoteker">Apoteker</option>
+      <option value="Bidan Mandiri">Bidan Mandiri</option>
+    </select>
+
+    <label for="jadwal">Tanggal Kunjungan:</label>
+    <input type="date" id="jadwal" name="jadwal" required />
+
+    <label for="catatan">Catatan Tambahan:</label>
+    <textarea id="catatan" name="catatan" rows="3" placeholder="Opsional..."></textarea>
+
+    <button type="submit">Daftar Sekarang</button>
+  </form>
+</div>
+
+<footer>
+  <p>&copy; 2025 Klinik Sehat. Semua hak cipta dilindungi.</p>
+</footer>
+
+</body>
+</html>

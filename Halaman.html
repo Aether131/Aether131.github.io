@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beranda</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    header {
+      position: relative;
+      height: 300px;
+      color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -1;
+      transition: background-image 1s ease-in-out;
+      filter: brightness(0.6);
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .logout-icon {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 20px;
+      cursor: pointer;
+      color: white;
+      z-index: 1;
+    }
+
+    .logo {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid white;
+      z-index: 1;
+    }
+
+    .hero {
+      padding: 60px 20px;
+      text-align: center;
+      background-color: #00796b;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      min-height: 48px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 700px;
+      margin: 0 auto;
+      min-height: 56px;
+    }
+
+    .section-bg {
+      position: relative;
+      padding: 60px 20px;
+      background-image: url('dua.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+
+    .section-bg::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    .section-bg .content {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .cards {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      width: 260px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      color: #333;
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .card h3 {
+      margin: 10px 0 5px;
+      font-size: 18px;
+    }
+
+    .card p {
+      margin: 0;
+      color: #555;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .btn-daftar {
+      display: inline-block;
+      background-color: #ffffff;
+      color: #00796b;
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 16px;
+      text-decoration: none;
+      margin-top: 40px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .btn-daftar:hover {
+      background-color: #c8e6c9;
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #004d40;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    header h1,
+    nav a {
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    a.card-link {
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Logo Klinik -->
+  <img src="logo.png" alt="Logo Klinik Sehat" class="logo" />
+
+  <header id="header">
+    <h1>Halaman Utama</h1>
+    <nav>
+      <ul>
+        <li><a href="Informasi klinik.html">Informasi klinik</a></li>
+        <li><a href="layanan.html">Layanan</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+        <li><a href="FAQ.html">FAQ</a></li>
+      </ul>
+    </nav>
+    <span class="logout-icon" onclick="logout()">Logout</span>
+  </header>
+
+  <!-- Hero dengan animasi ketik -->
+  <div class="hero">
+    <h1 id="hero-title"></h1>
+    <p id="hero-desc"></p>
+  </div>
+
+  <!-- Section Layanan -->
+  <div class="section-bg">
+    <div class="content">
+      <h2>Layanan Kami</h2>
+      <div class="cards">
+        <!-- Card Layanan -->
+        <a href="spesialisbidan.html" class="card-link">
+          <div class="card">
+            <img src="spsbidan.jpg" alt="Spesialis Bidan" />
+            <h3>Dokter Spesialis Kandungan dan layanan Bidan</h3>
+            <p>Pemeriksaan kandungan oleh Dokter Spesialis. Aman, akurat, dan terpercaya.</p>
+          </div>
+        </a>
+        <a href="dokterumum.html" class="card-link">
+          <div class="card">
+            <img src="umum.jpg" alt="Dokter Umum" />
+            <h3>Dokter Umum</h3>
+            <p>Pemeriksaan umum kepada pasien, layanan Dokter Umum Tepat dan Terpercaya.</p>
+          </div>
+        </a>
+        <a href="fisioterapis.html" class="card-link">
+          <div class="card">
+            <img src="terapi.jpg" alt="Fisioterapis" />
+            <h3>Fisioterapis</h3>
+            <p>Bantu si kecil tumbuh optimal dengan fisioterapi bayi yang aman, lembut, dan penuh kasih.</p>
+          </div>
+        </a>
+        <a href="bidanmandiri.html" class="card-link">
+          <div class="card">
+            <img src="bidan.jpg" alt="Bidan Mandiri" />
+            <h3>Bidan Mandiri</h3>
+            <p>Layanan bidan mandiri: Aman, nyaman, dan penuh kasih untuk ibu dan buah hati.</p>
+          </div>
+        </a>
+        <a href="dokteraesthetic.html" class="card-link">
+          <div class="card">
+            <img src="sps.jpg" alt="Aesthetic" />
+            <h3>Dokter Spesialis Aesthetic Anti Aging</h3>
+            <p>Tampil Lebih Muda, Segar, dan Natural — Bersama Dokter Spesialis Estetika & Anti-Aging.</p>
+          </div>
+        </a>
+        <a href="senamhamil.html" class="card-link">
+          <div class="card">
+            <img src="senam.jpg" alt="Senam Hamil" />
+            <h3>Layanan Senam Hamil / Prenatal Yoga</h3>
+            <p>Menjaga kesehatan selama hamil adalah bagian dari ikhtiar menyambut amanah.</p>
+          </div>
+        </a>
+        <a href="babykids.html" class="card-link">
+          <div class="card">
+            <img src="kids.jpg" alt="Kids Treatment" />
+            <h3>Baby, Kids and Treatment</h3>
+            <p>Dari pijat bayi hingga terapi tumbuh kembang. Aman, lembut, dan penuh cinta.</p>
+          </div>
+        </a>
+        <a href="apoteker.html" class="card-link">
+          <div class="card">
+            <img src="apotek.jpg" alt="Apoteker" />
+            <h3>Apoteker</h3>
+            <p>Layanan Apoteker: Aman, Tepat, dan Terpercaya.</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Tombol Pendaftaran -->
+      <div>
+        <a href="pasien.html" class="btn-daftar">Isi Formulir Pendaftaran Pasien</a>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Klinik Sehat. Semua hak cipta dilindungi.</p>
+  </footer>
+
+  <script>
+    function logout() {
+      if (confirm('Apakah Anda yakin ingin logout?')) {
+        window.location.href = 'login.html';
+      }
+    }
+
+    // Background header slideshow
+    const header = document.getElementById('header');
+    const images = ['1.jpg', 'dua.jpg', 'tiga.webp'];
+    let bgIndex = 0;
+
+    function changeHeaderBackground() {
+      header.style.backgroundImage = `url('${images[bgIndex]}')`;
+      bgIndex = (bgIndex + 1) % images.length;
+    }
+
+    setInterval(changeHeaderBackground, 4000);
+
+    // Hero text typewriter effect
+    const titles = [
+      "Selamat Datang di Layanan Klinik",
+      "Klinik Kesehatan Terbaik Keluarga Anda",
+      "Layanan Medis Profesional dan Terpercaya"
+    ];
+
+    const descriptions = [
+      "Kami memberikan pelayanan kesehatan terbaik untuk Anda dan keluarga, dengan tenaga medis profesional dan fasilitas lengkap.",
+      "Kami hadir untuk menjaga kesehatan Anda setiap hari dengan cinta dan kepedulian.",
+      "Percayakan kesehatan Anda kepada kami – aman, nyaman, dan menyeluruh."
+    ];
+
+    let heroIndex = 0;
+    const titleEl = document.getElementById("hero-title");
+    const descEl = document.getElementById("hero-desc");
+
+    function typeText(el, text, callback) {
+      el.textContent = "";
+      let i = 0;
+      const interval = setInterval(() => {
+        el.textContent += text.charAt(i);
+        i++;
+        if (i === text.length) {
+          clearInterval(interval);
+          if (callback) setTimeout(callback, 1000);
+        }
+      }, 40);
+    }
+
+    function startHeroTyping() {
+      typeText(titleEl, titles[heroIndex], () => {
+        typeText(descEl, descriptions[heroIndex], () => {
+          heroIndex = (heroIndex + 1) % titles.length;
+          setTimeout(startHeroTyping, 3000);
+        });
+      });
+    }
+
+    window.onload = () => {
+      changeHeaderBackground();
+      startHeroTyping();
+    };
+  </script>
+
+</body>
+</html>

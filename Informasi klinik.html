@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Informasi Klinik</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body::before {
+      content: "";
+      background: url('klinikluar.jpg') no-repeat center center fixed;
+      background-size: cover;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: -1;
+      filter: brightness(0.6);
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-100">
+
+  <!-- Header -->
+  <header class="bg-teal-700 bg-opacity-90 text-white p-4">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      <!-- Logo -->
+      <img src="logo.png" alt="Logo Klinik" class="w-12 h-12 rounded-full border-2 border-white" />
+
+      <!-- Judul Klinik -->
+      <h1 class="text-2xl font-bold text-center flex-1 -ml-12">Klinik Sehat</h1>
+
+      <!-- Tombol Beranda -->
+      <a href="Halaman.html" class="hover:underline hover:text-gray-200 transition duration-200 text-sm font-semibold">
+        Beranda
+      </a>
+    </div>
+  </header>
+
+  <!-- Konten Utama -->
+  <main class="max-w-6xl mx-auto p-6 mt-8 bg-white bg-opacity-90 text-gray-800 rounded-2xl shadow-lg space-y-8">
+    <!-- Tentang Klinik -->
+    <section>
+      <h2 class="text-3xl font-bold text-teal-700 mb-4">Tentang Klinik Sehat</h2>
+      <p class="text-lg leading-relaxed">
+        Klinik Sehat adalah pusat layanan kesehatan modern yang menyediakan berbagai layanan medis dan terapi, mulai dari perawatan estetika, senam hamil, hingga fisioterapi anak. Kami mengedepankan pelayanan yang ramah, profesional, dan berbasis teknologi terkini.
+      </p>
+      <p class="mt-4">
+        Dikelola oleh tim dokter, terapis, dan instruktur bersertifikat, Klinik Sehat siap menjadi mitra kesehatan Anda dan keluarga.
+      </p>
+    </section>
+
+    <!-- Jadwal Operasional -->
+    <section>
+      <h2 class="text-2xl font-semibold text-teal-700 mb-3">Jadwal Operasional</h2>
+      <table class="w-full table-auto border-collapse">
+        <thead>
+          <tr class="bg-teal-100 text-teal-800">
+            <th class="text-left px-4 py-2">Hari</th>
+            <th class="text-left px-4 py-2">Jam Buka</th>
+            <th class="text-left px-4 py-2">Jam Tutup</th>
+          </tr>
+        </thead>
+        <tbody class="text-gray-700">
+          <tr class="border-b">
+            <td class="px-4 py-2">Senin - Jumat</td>
+            <td class="px-4 py-2">08.00 WIB</td>
+            <td class="px-4 py-2">18.00 WIB</td>
+          </tr>
+          <tr class="border-b">
+            <td class="px-4 py-2">Sabtu</td>
+            <td class="px-4 py-2">09.00 WIB</td>
+            <td class="px-4 py-2">14.00 WIB</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2">Minggu & Libur Nasional</td>
+            <td class="px-4 py-2" colspan="2">Tutup</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Lokasi -->
+    <section>
+      <h2 class="text-2xl font-semibold text-teal-700 mb-3">Lokasi Klinik</h2>
+      <p>
+        Jl. Pramuka No.22, Bengkalis<br>
+        Telp: (021) 1234 5678<br>
+        Email: info@kliniksehat.id
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center text-sm text-white mt-12 mb-6">
+    &copy; 2025 Klinik Sehat. Semua Hak Dilindungi.
+  </footer>
+
+</body>
+</html>
