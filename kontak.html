@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontak Klinik</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="relative min-h-screen bg-cover bg-center bg-no-repeat font-sans"
+      style="background-image: url('apotek.jpg');">
+
+  <!-- Overlay gelap seluruh halaman -->
+  <div class="absolute inset-0 bg-black bg-opacity-40 z-0"></div>
+
+  <!-- Tombol Kembali ke Beranda -->
+  <a href="Halaman.html"
+     class="absolute top-4 right-4 z-10 bg-teal-600 text-white text-sm sm:text-base px-3 sm:px-5 py-2 rounded-md hover:bg-teal-700 shadow-md transition duration-300">
+    Beranda
+  </a>
+
+  <!-- Konten -->
+  <section class="relative z-10 max-w-4xl mx-auto p-8 mt-32 bg-white/90 shadow-xl rounded-xl backdrop-blur-sm">
+    <h2 class="text-3xl font-bold mb-6 text-teal-600">Hubungi Kami</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      
+      <!-- Form Kontak -->
+      <form class="space-y-4">
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-700">Nama Lengkap</label>
+          <input type="text" id="name" name="name"
+                 class="w-full mt-1 p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-400"
+                 required />
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+          <input type="email" id="email" name="email"
+                 class="w-full mt-1 p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-400"
+                 required />
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-medium text-gray-700">Pesan</label>
+          <textarea id="message" name="message" rows="4"
+                    class="w-full mt-1 p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-400"
+                    required></textarea>
+        </div>
+        <button type="submit"
+                class="px-6 py-2 bg-teal-600 text-white rounded-md hover:bg-teal-700 transition duration-300">
+          Kirim
+        </button>
+      </form>
+
+      <!-- Informasi Kontak -->
+      <div class="bg-teal-50 p-4 rounded-md shadow-sm">
+        <h3 class="text-xl font-semibold mb-3 text-teal-700">Informasi Kontak</h3>
+        <p class="mb-2"><strong>Alamat:</strong> Jl. Pramuka No.22, Bengkalis</p>
+        <p class="mb-2"><strong>Telepon:</strong> (+62) 822-1714-6347</p>
+        <p class="mb-2">
+          <strong>Email:</strong>
+          <a href="mailto:ikhsansuryadin04@gmail.com?subject=Pertanyaan%20Tentang%20Layanan&body=Halo%20Klinik%2C%20saya%20ingin%20bertanya%20tentang%20layanan%20yang%20tersedia."
+             class="text-teal-600 hover:underline">
+            ikhsansuryadin04@gmail.com
+          </a>
+        </p>
+        <p class="mt-4 text-sm text-gray-600">Jam Operasional: Senin - Minggu, 24 jam</p>
+
+        <!-- Tombol WhatsApp -->
+        <a href="https://wa.me/6282217146347?text=Halo%20Klinik%20Sehat%2C%20saya%20ingin%20bertanya%20lebih%20lanjut."
+           target="_blank"
+           class="mt-6 inline-block bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-lg shadow-md transition duration-300 ease-in-out">
+          💬 Hubungi via WhatsApp
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
